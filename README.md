@@ -1,3 +1,6 @@
+KGB_ARRUDA-INSTAOSINT
+
+
 O programa é um coletor e gerador de relatórios de OSINT para perfis do Instagram. Em termos simples, ele:
 
 usa um session ID de uma conta logada para acessar APIs privadas do Instagram

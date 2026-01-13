@@ -1,28 +1,33 @@
-KGB_ARRUDA-INSTAOSINT
 
-
-O programa é um coletor e gerador de relatórios de OSINT para perfis do Instagram. Em termos simples, ele:
-
-usa um session ID de uma conta logada para acessar APIs privadas do Instagram
-
-localiza o ID do usuário a partir do username informado
-
-coleta dados do perfil (nome, biografia, verificado, privado, contagem de seguidores/seguindo etc.)
-
-obtém uma amostra de seguidores recentes
-
-coleta as postagens mais recentes do perfil
-
-extrai legenda, data, localização, likes e comentários dessas postagens
-
-coleta comentários e identifica os usuários que mais comentam (top comentadores)
-
-reúne tudo isso e gera um relatório em PDF organizado em seções, incluindo:
-
-resumo do perfil
-
-top seguidores
-
-análise de engajamento
-
-geolocalização e atividades recentes
+Descrição
+Ferramenta em Python para coleta de informações públicas e geração de relatório OSINT em PDF
+a partir de perfis do Instagram.
+O script realiza consultas utilizando um sessionid válido e produz um relatório estruturado
+contendo dados de perfil,
+seguidores, postagens recentes, metadados e análise básica de engajamento.
+Aviso Legal
+Esta ferramenta destina-se exclusivamente a fins educacionais e pesquisa em OSINT.
+O usuário é totalmente responsável pelo uso que fizer da ferramenta e pelo respeito à legislação
+vigente
+e aos termos de serviço do Instagram.
+Funcionalidades
+• Coleta de informações do perfil
+• Obtenção de seguidores recentes
+• Captura de postagens recentes
+• Extração de legenda, data, localizações, likes e comentários
+• Identificação de top comentadores
+• Geração automática de relatório em PDF
+Requisitos
+• Python 3.9 ou superior
+• Conexão com a internet
+• sessionid válido de conta logada no Instagram
+Instalação
+1. Clonar o repositório
+2. Executar: pip install -r requirements.txt
+Uso
+Modo interativo: python main.py
+Modo direto por linha de comando: python main.py
+Será gerado o arquivo relatorio_.pdf
+Contato
+Autor: KGB_Arruda
+E-mail: arrudacibersec@proton.me

@@ -28,7 +28,7 @@ Requisitos
 • Conexão com a internet
 • sessionid válido de conta logada no Instagram
 
-Instalação KALI
+Instalação KALI e funcionamento
 1. Clonar o repositório
 2. Entrar na pasta KGB_ARRUDA_INSTAOSINT
 3. Gerar ambiente virtual (exemplo Python3 -m venv venv)
@@ -37,11 +37,18 @@ Instalação KALI
 5. Rodar programa com comando python3 kgb_arruda_instaosint.py 
 
    
+Instalação WINDOWS e funcionamento:
+1. Instalar python (função add path atividada.
+2. Baixar o programa e unzipar
+3. Entrar na pasta onde está o programa KGB_ARRUDA_INSTAOSINT.py e requirements.txt
+4. Comando pip install -r requirements.txt
+5. Comando python KGB_ARRUDA_INSTAOSINT.py
 
+Obtendo sessioid do instagram:
+1. Logar em um instagram válido, adicionar o add-on cookies-editor
+2. Ativar o add-on na página do Instagram logado e obter o nº do sessioid
    
    
-
-
 
 Será gerado o arquivo relatorio.pdf na pasta onde o programa foi instalado
 Contato

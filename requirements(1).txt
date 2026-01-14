@@ -1,4 +1,0 @@
-instagrapi
-pillow
-fpdf
-Requests

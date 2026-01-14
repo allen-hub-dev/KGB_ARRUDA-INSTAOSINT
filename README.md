@@ -34,15 +34,15 @@ Instalação KALI e funcionamento
 3. Gerar ambiente virtual (exemplo Python3 -m venv venv)
 4. Habilitar ambiente (source venv/bin/activate)
 4. Executar: pip install -r requirements.txt
-5. Rodar programa com comando python3 kgb_arruda_instaosint.py 
+5. Rodar programa com comando python3 KGB_ARRUDA_INSTAOSINT1.0.py
 
    
 Instalação WINDOWS e funcionamento:
 1. Instalar python (função add path atividada.
 2. Baixar o programa e unzipar
-3. Entrar na pasta onde está o programa KGB_ARRUDA_INSTAOSINT.py e requirements.txt
+3. Entrar na pasta onde está o programa KGB_ARRUDA_INSTAOSINT1.0.py e requirements.txt
 4. Comando pip install -r requirements.txt
-5. Comando python KGB_ARRUDA_INSTAOSINT.py
+5. Comando python KGB_ARRUDA_INSTAOSINT1.0.py
 
 Obtendo sessioid do instagram:
 1. Logar em um instagram válido, adicionar o add-on cookies-editor

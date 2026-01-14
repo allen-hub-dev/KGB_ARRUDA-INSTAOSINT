@@ -57,4 +57,4 @@ E-mail: arrudacibersec@proton.me
 
 <h2>Screenshot</h2>
 
-<img src="Images/Sem título.jpg" width="800">
+<img src="Images/Sem título.jpg" width="900">

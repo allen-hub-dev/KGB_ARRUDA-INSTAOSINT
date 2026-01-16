@@ -1,105 +1,90 @@
-# 🕵️ Instagram OSINT – KGB_Arruda InstaOSINT
+# 🔍 AI Image Detector - KGB-LABS
 
-## Descrição
+Este projeto implementa uma ferramenta de **Análise Forense Digital** para imagens, com o objetivo de auxiliar na detecção de manipulações ou de imagens geradas por Inteligência Artificial (IA). A aplicação utiliza uma interface web interativa construída com **Gradio**.
 
-Esta é uma **ferramenta em Python** desenvolvida para a coleta de informações públicas e a geração de um **relatório OSINT (Open Source Intelligence)** estruturado em formato PDF, a partir de perfis do Instagram.
+## 🌟 Funcionalidades
 
-O script realiza consultas utilizando um `sessionid` válido de uma conta logada e produz um relatório detalhado contendo:
+O detector realiza uma análise multifacetada da imagem, combinando diversas técnicas de forense digital para gerar um veredito de probabilidade de a imagem ter sido gerada por IA.
 
-*   Dados básicos do perfil.
-*   Lista de seguidores recentes.
-*   Postagens recentes.
-*   Metadados das postagens (legenda, data, localizações, likes e comentários).
-*   Análise básica de engajamento, incluindo a identificação de top comentadores.
-
-## ⚠️ Aviso Legal
-
-> Esta ferramenta destina-se exclusivamente a **fins educacionais e pesquisa em OSINT**. O usuário é totalmente responsável pelo uso que fizer da ferramenta e pelo respeito à legislação vigente e aos termos de serviço do Instagram.
-
-## ✨ Funcionalidades
-
-| Funcionalidade | Detalhe |
+| Análise | Descrição |
 | :--- | :--- |
-| **Coleta de Perfil** | Obtenção de informações públicas essenciais do perfil alvo. |
-| **Seguidores Recentes** | Captura de uma lista de seguidores mais recentes. |
-| **Postagens Recentes** | Coleta de dados das últimas postagens do perfil. |
-| **Extração de Metadados** | Extração de legenda, data, localização, contagem de likes e comentários. |
-| **Top Comentadores** | Identificação dos usuários mais ativos nos comentários. |
-| **Relatório em PDF** | Geração automática de um relatório estruturado chamado `relatorio.pdf`. |
+| **Análise de Nível de Erro (ELA)** | Detecta inconsistências na compressão JPEG, que podem indicar áreas que foram editadas ou coladas. |
+| **Análise de Ruído** | Examina a consistência do ruído da imagem, pois o ruído em imagens geradas por IA ou manipuladas tende a ser menos uniforme. |
+| **Análise de Frequência** | Analisa o espectro de frequência da imagem (via Transformada de Fourier) para identificar padrões anormais que não são típicos de fotografias naturais. |
+| **Análise de Compressão** | Verifica artefatos de compressão JPEG, comparando a imagem original com uma versão re-comprimida. |
+| **Análise de Metadados** | Extrai e verifica a presença de metadados EXIF, cuja ausência ou inconsistência pode ser um indicador de manipulação ou geração artificial. |
 
-## 🛠️ Requisitos
+## ⚙️ Instalação e Uso
 
-Para o funcionamento correto do script, são necessários os seguintes requisitos:
+Para configurar e executar o projeto, siga as instruções específicas para o seu sistema operacional.
 
-*   **Python 3.9** ou superior.
-*   Conexão com a internet.
-*   Um `sessionid` válido de uma conta logada no Instagram.
+### 1. Pré-requisitos Comuns
 
-## 📥 Instalação e Funcionamento
+*   Certifique-se de ter o **Python 3** instalado em seu sistema.
+*   Salve o código do detector em um arquivo chamado, por exemplo, `ai_detector.py`.
+*   Crie o arquivo `requirements.txt` com as dependências listadas abaixo.
 
-### 🐧 Instalação no KALI (ou Linux)
+```text
+gradio
+numpy
+opencv-python
+Pillow
+scipy
+scikit-image
+```
 
-Siga os passos abaixo para configurar e rodar o programa em ambientes Linux:
+### 2. 🐧 Kali Linux / Outras Distribuições Linux
 
-1.  **Clonar o repositório** (assumindo que o repositório esteja disponível):
-    ```bash
-    git clone [URL_DO_REPOSITORIO]
-    ```
-2.  **Entrar na pasta** do projeto:
-    ```bash
-    cd KGB_ARRUDA_INSTAOSINT
-    ```
-3.  **Gerar ambiente virtual** (recomendado):
+Recomenda-se o uso de um ambiente virtual para isolar as dependências.
+
+1.  **Navegue** até a pasta do projeto no terminal.
+2.  **Crie e ative** o ambiente virtual:
     ```bash
     python3 -m venv venv
-    ```
-4.  **Habilitar ambiente** virtual:
-    ```bash
     source venv/bin/activate
     ```
-5.  **Instalar dependências**:
+3.  **Instale as dependências**:
     ```bash
     pip install -r requirements.txt
     ```
-6.  **Rodar o programa**:
+4.  **Execute o programa**:
     ```bash
-    python3 KGB_ARRUDA_INSTAOSINT1.0.py
+    python3 ai_detector.py
     ```
 
-### 🪟 Instalação no WINDOWS
+### 3. 🪟 Windows
 
-Siga os passos abaixo para configurar e rodar o programa no Windows:
-
-1.  **Instalar Python**: Certifique-se de que a opção "Add Python to PATH" foi ativada durante a instalação.
-2.  **Baixar o programa** e descompactar (`unzip`).
-3.  **Navegar até a pasta** onde se encontram os arquivos `KGB_ARRUDA_INSTAOSINT1.0.py` e `requirements.txt`.
-4.  **Instalar dependências** (em um terminal/CMD):
+1.  Certifique-se de que o Python está instalado e configurado no `PATH` do sistema.
+2.  **Navegue** até a pasta do projeto no Prompt de Comando ou PowerShell.
+3.  **Instale as dependências**:
     ```bash
     pip install -r requirements.txt
     ```
-5.  **Rodar o programa**:
+4.  **Execute o programa**:
     ```bash
-    python KGB_ARRUDA_INSTAOSINT1.0.py
+    python ai_detector.py
     ```
 
-## 🔑 Obtendo o `sessionid` do Instagram
+O servidor será iniciado e você poderá acessar a interface no seu navegador, geralmente em `http://127.0.0.1:8080` (ou o endereço indicado no console).
 
-O `sessionid` é crucial para que o script possa realizar as consultas.
+### Interface de Uso
 
-1.  **Logar** em uma conta válida do Instagram no seu navegador.
-2.  **Instalar um add-on** de edição de cookies (ex: "Cookies Editor" para Chrome/Firefox).
-3.  **Ativar o add-on** na página do Instagram logado e **obter o valor** do cookie chamado `sessionid`.
+1.  **Envie a Imagem**: Use o campo "Envie a Imagem" para fazer o upload ou colar a imagem que deseja analisar.
+2.  **Analisar Imagem**: Clique no botão "🔍 Analisar Imagem".
+3.  **Resultado da Análise**: O relatório detalhado aparecerá na caixa de texto, incluindo o veredito geral e os resultados de cada análise forense.
+4.  **Imagem Analisada**: A imagem original será exibida para referência.
 
-## 📄 Saída
+## ⚠️ Aviso Importante (Disclaimer)
 
-Após a execução, o arquivo **`relatorio.pdf`** será gerado na mesma pasta onde o programa foi instalado.
+Esta ferramenta é para fins de pesquisa e auxílio na análise.
+
+*   Os resultados **não são 100% precisos** e devem ser interpretados com cuidado pelo analista.
+*   Imagens reais podem ter características que as fazem parecer geradas por IA, e vice-versa.
+*   Imagens geradas por IA evoluem constantemente e podem enganar detectores.
 
 ## 📧 Contato e Créditos
 
-*   **Autor**: KGB\_Arruda
-*   **E-mail**: arrudacibersec@proton.me
+Desenvolvido por **KGB-LABS**.
 
-## 🖼️ Screenshot
-
-<img src="Images/Sem título.jpg" width="900" alt="Captura de tela da interface do programa InstaOSINT">
-
+*   **GitHub**: [https://github.com/KGB-LABS](https://github.com/KGB-LABS)
+*   **Email**: arrudacibersec@proton.me
